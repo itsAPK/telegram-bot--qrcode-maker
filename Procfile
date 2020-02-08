@@ -1,1 +1,1 @@
-web:python3 pytube.py
+web:python pytube.py
