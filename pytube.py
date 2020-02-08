@@ -17,8 +17,9 @@ def send_Welcome(message):
 @bot.message_handler(commands=['create'])
 def qrcode_maker(message):
     url = pyqrcode.create(input('SEND THE LINK'))
-    url.png('qrcode.png', scale=2)
+   qrcode_img= url.png('qrcode.png', scale=2)
     print(url.terminal(quiet_zone=1))
+    bot.replay_to(message,qrcode_img)
 
 
 @sever.route('/' + TOKEN, methods=['POST'])
