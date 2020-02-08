@@ -29,7 +29,7 @@ def getMessage():
 
 @sever.route('/')
 def webhook():
-    bot.set_webhook(url='' + TOKEN)
+    bot.set_webhook(url='https://radiant-castle-28386.herokuapp.com/' + TOKEN)
     return "!", 200
 
 
