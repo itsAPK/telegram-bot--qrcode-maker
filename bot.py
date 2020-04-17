@@ -1,14 +1,9 @@
 import telebot
 import pyqrcode
-from flask import Flask,request
 import time
-import os
 
-
-token="1166305238:AAGOk3BNVGUlMHaZqMVRlPZa5gOxazX4clg"
+token="<your_bot_token>"
 bot=telebot.TeleBot(token)
-
-'''server=Flask(__name__)'''
 
 @bot.message_handler(commands=['start'])
 def start_message(msg):
@@ -27,21 +22,6 @@ def qrcode(message):
     bot.send_chat_action(message.chat.id, 'upload_document')
     bot.send_document(message.chat.id,open('qrcode.png','rb' ))
 
-'''@server.route('/' + token, methods=['POST'])
-def getMessage():
-    bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
-    return "!", 200'''
-
-
-'''@server.route("/")
-def webhook():
-    bot.remove_webhook()
-    bot.set_webhook(url='http://966fcf05.ngrok.io' + token)
-    return "!", 200'''
-
-
-'''if __name__ == "__main__":
-    server.run(host="localhost", port=8000,debug=True)'''
 
 while True:
 	try:
