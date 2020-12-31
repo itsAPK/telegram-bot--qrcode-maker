@@ -2,13 +2,13 @@
 
 This the simple Python bot which generate QR Code in png format
 
-#Installation
+# Installation
 
 Use Python 3 to install and run the Bot.
 
-`pip3 install pyTelegramBotAPI,pyqrcode,pypng
+<code>pip3 install pyTelegramBotAPI,pyqrcode,pypng</code>
 
-python3 bot.py`
+<code>python3 bot.py</code>
 
 
 # Used Libraries
